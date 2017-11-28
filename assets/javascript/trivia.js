@@ -104,7 +104,7 @@ var countdown = function (seconds) {
         $("#time-Left").html(seconds);
 
         if (seconds <= 0) {
-            $('.container').fadeOut(500);
+            $('.container').fadeOut(2000);
             var correctAnswers = 0;
             var IncorrectAnswers = 0;
 
@@ -122,11 +122,11 @@ var countdown = function (seconds) {
             }
             $('#correctTimesUp').append(correctAnswers);
             $('#incorrectTimesUp').append(IncorrectAnswers);
-            $('#timesUp').fadeIn(1000).show();
+            $('#timesUp').fadeIn(2000).show();
             clearInterval(time);
             return;
         }
-    }, 1000);
+    }, 2000);
 
     // submission pre timer done
     $('#sub-but').on('click', function () {
@@ -154,7 +154,7 @@ var quizReview = $('#sub-but').on('click', function () {
 
 
     countdown();
-    $('.container').fadeOut(500);
+    $('.container').fadeOut(2000);
     $('#answer').show();
     $('#correct').append(correctAnswers);
     $('#Incorrect').append(IncorrectAnswers);
